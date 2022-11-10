@@ -1,9 +1,10 @@
-/* Add styling for your page here */
-
 .App {
 
 }
 
 .BakeryItem {
-  
+  max-width:700px;
+}
+img {
+  max-width:300px;
 }
