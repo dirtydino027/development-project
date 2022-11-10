@@ -1,5 +1,9 @@
-.App {
+/* Add styling for your page here */
 
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .BakeryItem {
@@ -8,3 +12,4 @@
 img {
   max-width:300px;
 }
+
