@@ -28,7 +28,7 @@ function App() {
 
       {bakeryData.map((item, index) => ( // TODO: map bakeryData to BakeryItem components
 
-          <BakeryItem item={item} setCartItems={updateCart}/> // replace with BakeryItem component
+          <BakeryItem item={item} key={index} setCartItems={updateCart}/> // replace with BakeryItem component
 
       ))}
 
