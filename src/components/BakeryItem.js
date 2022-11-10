@@ -10,7 +10,7 @@ export default function BakeryItem(props) {
       <p>{item.description}</p>
       <p>{item.price}</p>
       <img src={item.image}></img>
-      <button onClick={() => props.updateCart(item.name)}>add2cart</button>
+      <button onClick={() => props.setCartItems(item)}>add2cart</button>
     </div>
   );
 }
