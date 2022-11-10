@@ -12,13 +12,15 @@ bakeryData.forEach((item) => {
 function App() {
   // TODO: use useState to create a state variable to hold the state of the cart
   /* add your cart state code here */
-  // const [cartNum, setCartNum] = useState(0);
-  const [cartItems, setCartItems] = useState({
+  const [cartPrice, setcartPrice] = useState(0);
+  const [cartItems, setCartItems] = useState(new Array(0));
+  function updateCart(item) {
 
-  });
-  function updateCart(id) {
-    
-    setCartItems
+    console.log(cartItems);
+    setCartItems(cartItems.concat([item.name+", "]));
+
+    setcartPrice(cartPrice + item.price)
+
   }
   return (
     <div className="App">
@@ -26,7 +28,7 @@ function App() {
 
       {bakeryData.map((item, index) => ( // TODO: map bakeryData to BakeryItem components
 
-          <BakeryItem item={item} setCartItems={setCartItems}/> // replace with BakeryItem component
+          <BakeryItem item={item} setCartItems={updateCart}/> // replace with BakeryItem component
 
       ))}
 
@@ -34,13 +36,11 @@ function App() {
         <h2>Cart</h2>
         {/* TODO: render a list of items in the cart */}
 
+        <p><b>items in cart:</b></p>{cartItems}
+        <p><b>total price:</b></p>{cartPrice}
       </div>
     </div>
   );
-}
-
-function addItem() {
-  console.log("heyyy");
 }
 
 export default App;
