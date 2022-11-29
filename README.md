@@ -1,7 +1,7 @@
 # Development
 
 ### Link to Deployed Website
-https://dirtydino027.github.io/development
+https://dirtydino027.github.io/development-project
 
 ### Goal and Value of the Application
 The goal of this application was to build a bakery website where users can look at the items
