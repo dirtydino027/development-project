@@ -1,33 +1,37 @@
-# React Studio
+# Development
 
-Use this stencil code to get started!
+### Link to Deployed Website
+https://dirtydino027.github.io/development
 
-Make sure you're signed into your GitHub account (either real or anonymous is fine for this).
+### Goal and Value of the Application
+The goal of this application was to build a bakery website where users can look at the items
+available at the bakery, filter/sort them in various ways, and add/remove them to a cart, which
+shows all the items the user has added as well as an aggregate price of those items. The value
+of this application to a user is that they can browse bakery items according to the characteristics
+important to them using the filter and sort options, create a cart with all the items they want,
+and see the total amount of money those items will cost them.
 
-If you do not follow these three steps, your react app WILL NOT DEPLOY CORRECTLY!
+### Usability Principles Considered
+This website is simple and straightforward, with an intuitive scrolling layout playing the filtering/
+sorting/reverting options at the top and the cart/total price at the bottom. The colors are fun but
+also provide high contrast so that the text is easy to read, and the buttons are large and clear.
+Another decision I made for usability was including a "revert back 2 original state" button at the top
+so that the user can easily see the initial bakery items without having to uncheck each filter/sort
+checkbox.
 
-1) Start to copy the stencil by clicking the green **"Use this template"** button above.
+### Organization of Components
+There is one component in this application, BakeryItem, which factors out the code, functionality, and
+style for each bakery item, including its name, description, color, type, image, price, and add/remove
+buttons. This component is then used in App.js when the bakery data is mapped onto the bakery list.
 
-2) In the configuration menu, set the name to `react-studio` and **make it Public**
+### How Data is Passed Down Through Components
+Data is passed through components using props. Props are used to pass the bakery item attributes from
+the data in App.js to the html in BakeryItem.js, as well as to pass the functions in App.js that need
+to be called on button clicks from BakeryItem.js.
 
-3) Lastly, you MUST **check "Include all branches"**
+### How the User Triggers State Changes
+I use state for the cart items and cart price, the current checked filters and sorts, the current
+data that should be displayed, as well as the unsorted version of that data (in case the used unchecks
+a sort option). Therefore, whenever the used adds/removes a bakery item to/from the cart, checks/
+unchecks a filter/sort checkbox, or clicks the revert button, a state change is triggered.
 
-Then, click "create repository from template" to create the repo in your github account. You can now clone the repository onto your local computer and open it in your editor of choice.
-
-## Getting started
-
-First, make sure you install all dependencies by running `npm install` in the project directory.
-
-Then, in the project directory, you can run `npm start` to run the app in the development mode.
-
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.
-
-You may also see any lint errors in the console.
-
-## Deploying
-
-We've included a GitHub Actions workflow that will automatically deploy your React app to GitHub Pages every time you push to the `main` branch. You can visit your site by visiting https://\<your GitHub username\>.github.io/react-studio
-
-Also there may be some latency with deploying, so it may take around 5 minutes after a commit to main before the website properly works.
