@@ -3,6 +3,10 @@
   flex-direction: column;
   align-items: center;
   color: purple;
+  background-color: rgb(253, 242, 228);
+  background-image: url("../cutiecloud.png");
+  background-size: 200px;
+  background-blend-mode: lighten;
 }
 /* #bakeryList {
   display: flex;
